@@ -1,10 +1,14 @@
 import { type ReactNode } from "react"
 
-const navLinks = [
-  { href: "#colors",     label: "Colors" },
-  { href: "#typography", label: "Typography" },
-  { href: "#spacing",    label: "Spacing" },
-  { href: "#components", label: "Components" },
+const tokenLinks = [
+  { href: "/styleguide#colors",     label: "Colors" },
+  { href: "/styleguide#typography", label: "Typography" },
+  { href: "/styleguide#spacing",    label: "Spacing" },
+  { href: "/styleguide#components", label: "Components" },
+]
+
+const demoLinks = [
+  { href: "/styleguide/landing-demo", label: "Landing Demo" },
 ]
 
 export default function StyleguideLayout({ children }: { children: ReactNode }) {
@@ -14,7 +18,25 @@ export default function StyleguideLayout({ children }: { children: ReactNode }) 
         <span className="text-xs font-mono text-muted uppercase tracking-widest mb-4">
           Lovel · Styleguide
         </span>
-        {navLinks.map((link) => (
+        <a
+          href="/styleguide"
+          className="text-xs font-mono text-muted uppercase tracking-widest mb-1 mt-2"
+        >
+          Tokens
+        </a>
+        {tokenLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="text-sm font-sans text-muted hover:text-foreground transition-colors py-1"
+          >
+            {link.label}
+          </a>
+        ))}
+        <span className="text-xs font-mono text-muted uppercase tracking-widest mb-1 mt-4">
+          Demos
+        </span>
+        {demoLinks.map((link) => (
           <a
             key={link.href}
             href={link.href}
