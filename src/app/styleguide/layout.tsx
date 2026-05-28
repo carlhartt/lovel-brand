@@ -1,10 +1,11 @@
 import { type ReactNode } from "react"
 
 const tokenLinks = [
-  { href: "/styleguide#colors",     label: "Colors" },
-  { href: "/styleguide#typography", label: "Typography" },
-  { href: "/styleguide#spacing",    label: "Spacing" },
-  { href: "/styleguide#components", label: "Components" },
+  { href: "/styleguide#overview",    label: "Overview" },
+  { href: "/styleguide#colors",      label: "Colors" },
+  { href: "/styleguide#typography",  label: "Typography" },
+  { href: "/styleguide#spacing",     label: "Spacing" },
+  { href: "/styleguide#components",  label: "Components" },
 ]
 
 const demoLinks = [
